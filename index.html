@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Строительная компания БИКО в Улан-Удэ - Строительство домов, ремонт квартир</title>
+    <meta name="description" content="Профессиональная строительная бригада 'БИКО' в Улан-Удэ. Строительство домов, гаражей, ремонт квартир под ключ. Скидки до 50% на объем! Гарантия качества. Закажите бесплатный расчет стоимости.">
+    <meta name="keywords" content="строительная компания улан-удэ, бригада строителей, строители, отделочники, ремонт дома, ремонт квартиры, ремонт квартиры в новостройке, строительство домов, строительство гаражей, демонтаж, бико улан-удэ">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+        background-color: #111827; /* Match body bg-gray-900 */
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #f59e0b;
+        border-radius: 10px;
+        border: 2px solid #1a1a1a;
+      }
+      .hidden {
+        display: none;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #f59e0b; /* amber-500 */
+      }
+      .swiper-slide {
+        height: auto;
+      }
+      body,
+      header,
+      section,
+      footer,
+      div,
+      nav,
+      a,
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      span,
+      li,
+      button {
+        transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+      }
+      body.light-theme {
+        background-color: #f8fafc !important;
+        color: #0f172a !important;
+      }
+      body.light-theme .bg-gray-900,
+      body.light-theme .bg-gray-900\/95,
+      body.light-theme .bg-gray-900\/80,
+      body.light-theme .bg-gray-800,
+      body.light-theme .bg-black\/20,
+      body.light-theme .bg-black\/30 {
+        background-color: #f8fafc !important;
+      }
+      body.light-theme .text-white,
+      body.light-theme .text-gray-300,
+      body.light-theme .text-gray-400,
+      body.light-theme .text-gray-500 {
+        color: #0f172a !important;
+      }
+      body.light-theme .border-gray-700,
+      body.light-theme .border-gray-800,
+      body.light-theme .border-gray-900 {
+        border-color: #cbd5e1 !important;
+      }
+      body.light-theme #mobile-menu {
+        background-color: rgba(248, 250, 252, 0.96) !important;
+      }
+      .theme-toggle {
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 14px;
+        border: 1px solid rgba(245, 158, 11, 0.4);
+        background: linear-gradient(145deg, rgba(17, 24, 39, 0.96), rgba(30, 41, 59, 0.92));
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #f59e0b;
+        box-shadow: 0 8px 20px rgba(2, 6, 23, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      }
+      .theme-toggle:hover {
+        box-shadow: 0 12px 24px rgba(245, 158, 11, 0.22);
+      }
+      #theme-icon {
+        display: inline-flex;
+        width: 1.2rem;
+        height: 1.2rem;
+        line-height: 1;
+      }
+      #theme-icon svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      #main-header .logo-ko {
+        color: #ffffff !important;
+        transition: color 0.35s ease;
+      }
+      body.light-theme #main-header.header-solid .logo-ko {
+        color: #0f172a !important;
+      }
+      #main-header nav.hidden.md\:flex > a {
+        color: #ffffff !important;
+      }
+      #main-header nav.hidden.md\:flex > a:hover {
+        color: #fbbf24 !important;
+      }
+      body.light-theme #main-header.header-solid nav.hidden.md\:flex > a {
+        color: #0f172a !important;
+      }
+      body.light-theme .text-gray-300,
+      body.light-theme .text-gray-400 {
+        color: #1e293b !important;
+      }
+      body.light-theme .theme-toggle {
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.95));
+        border-color: rgba(217, 119, 6, 0.5);
+        box-shadow: 0 10px 20px rgba(217, 119, 6, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+      }
+      body.light-theme #hero h1,
+      body.light-theme #hero p {
+        color: #ffffff !important;
+      }
+      body.light-theme #phone {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        border-color: #cbd5e1 !important;
+      }
+      body.light-theme #phone::placeholder {
+        color: #64748b !important;
+      }
+      body.light-theme #mobile-menu-button {
+        color: #ffffff !important;
+      }
+      body.light-theme #main-header.header-solid #mobile-menu-button,
+      body.light-theme #mobile-menu-button[aria-expanded="true"] {
+        color: #0f172a !important;
+      }
+
+      body.light-theme #fab-button {
+        background-color: #f59e0b !important;
+        color: #ffffff !important;
+      }
+      body.light-theme #fab-button:hover {
+        background-color: #d97706 !important;
+      }
+      #fab-menu a,
+      #fab-menu a svg {
+        color: #ffffff !important;
+      }
+      body.light-theme #header-call-button,
+      body.light-theme #mobile-call-button,
+      body.light-theme #send-button,
+      body.light-theme #hero a {
+        color: #ffffff !important;
+      }
+      body.light-theme #about {
+        background-color: rgba(15, 23, 42, 0.9) !important;
+      }
+      body.light-theme #about .text-white {
+        color: #ffffff !important;
+      }
+      body.light-theme #about .text-gray-300,
+      body.light-theme #about .text-gray-400,
+      body.light-theme #about p,
+      body.light-theme #about li {
+        color: #d1d5db !important;
+      }
+
+      .portfolio-card-image {
+        aspect-ratio: 16 / 10;
+        width: 100%;
+        object-fit: cover;
+      }
+      .portfolio-card {
+        background: linear-gradient(145deg, rgba(31, 41, 55, 0.96), rgba(17, 24, 39, 0.95));
+      }
+      .portfolio-chip {
+        background: rgba(245, 158, 11, 0.16);
+        border: 1px solid rgba(245, 158, 11, 0.35);
+      }
+    </style>
+    <link rel="stylesheet" href="/index.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "БИКО Construction",
+      "description": "Профессиональные услуги по строительству домов, гаражей, ремонту квартир и отделочным работам в Улан-Удэ.",
+      "telephone": "+79887219988",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Улан-Удэ",
+        "addressCountry": "RU"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Улан-Удэ"
+      },
+      "priceRange": "$$",
+      "url": "#"
+    }
+    </script>
+  </head>
+  <body class="bg-gray-900 text-white font-sans antialiased">
+    
+    <!-- Header -->
+    <header id="main-header" class="fixed top-4 left-4 right-4 md:top-0 md:left-0 md:right-0 z-50 transition-all duration-300 bg-transparent rounded-xl md:rounded-none">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-wider">
+          <span class="text-amber-500">БИ</span><span class="text-white logo-ko">КО</span>
+        </div>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#hero" class="text-gray-300 hover:text-amber-400 transition cursor-pointer">Главная</a>
+          <a href="#services" class="text-gray-300 hover:text-amber-400 transition cursor-pointer">Услуги</a>
+          <a href="#about" class="text-gray-300 hover:text-amber-400 transition cursor-pointer">О нас</a>
+          <a href="#testimonials" class="text-gray-300 hover:text-amber-400 transition cursor-pointer">Отзывы</a>
+          <a href="#contact" class="text-gray-300 hover:text-amber-400 transition cursor-pointer">Контакты</a>
+          <a href="portfolio.html" class="auth-link hidden text-gray-300 hover:text-amber-400 transition cursor-pointer">Для Партнёров</a>
+          <a href="#" class="logout-link auth-link hidden text-gray-300 hover:text-amber-400 transition cursor-pointer">Выйти</a>
+        </nav>
+        <div class="no-auth-link">
+          <a id="header-call-button" href="#contact" class="hidden md:block bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-105">
+            Заказать звонок
+          </a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+            <span id="theme-icon" class="text-lg leading-none"></span>
+          </button>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+              <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+              <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+     <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900/95 z-40 backdrop-blur-sm transition-opacity duration-300 ease-in-out">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <nav class="flex flex-col space-y-8">
+                <a href="#hero" class="mobile-menu-link text-3xl text-gray-300 hover:text-amber-400 transition">Главная</a>
+                <a href="#services" class="mobile-menu-link text-3xl text-gray-300 hover:text-amber-400 transition">Услуги</a>
+                <a href="#about" class="mobile-menu-link text-3xl text-gray-300 hover:text-amber-400 transition">О нас</a>
+                <a href="#testimonials" class="mobile-menu-link text-3xl text-gray-300 hover:text-amber-400 transition">Отзывы</a>
+                <a href="#contact" class="mobile-menu-link text-3xl text-gray-300 hover:text-amber-400 transition">Контакты</a>
+                <a href="portfolio.html" class="mobile-menu-link auth-link hidden text-3xl text-gray-300 hover:text-amber-400 transition">Для Партнёров</a>
+                <a href="#" class="mobile-menu-link logout-link auth-link hidden text-3xl text-gray-300 hover:text-amber-400 transition">Выйти</a>
+            </nav>
+            <div class="mt-12 no-auth-link">
+                <a id="mobile-call-button" href="#contact" class="mobile-menu-link bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-full transition-transform duration-300 hover:scale-105 text-xl">
+                  Заказать звонок
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative h-[60vh] flex items-end justify-center text-center text-white overflow-hidden pb-12 md:pb-20">
+            <div class="absolute top-0 left-4 right-4 bottom-0 rounded-b-2xl bg-cover bg-center bg-no-repeat" style="background-image: url('https://rrezerv.ru/testbc/bgbico.webp')"></div>
+            <div class="absolute top-0 left-4 right-4 bottom-0 rounded-b-2xl bg-black bg-opacity-60"></div>
+            <div class="relative z-10 p-6">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
+                    Строительство домов и ремонт в <span class="text-amber-500">Улан-Удэ</span>
+                </h1>
+                <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-md md:max-w-3xl mx-auto mb-8 drop-shadow-md">
+                    Профессиональная бригада выполнит строительство домов, гаражей и ремонт квартир в Улан-Удэ. Скидки до 50%!
+                </p>
+                <a href="#contact" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-3 px-8 text-base md:py-4 md:px-10 md:text-lg rounded-full transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg inline-block">
+                    Получить консультацию
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-white">Наши услуги в Улан-Удэ</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Мы предлагаем полный спектр услуг для реализации вашего проекта любой сложности.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
+                        <div class="mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Строительство</h3>
+                        <p class="text-gray-400">Возведение зданий и сооружений с нуля. Мы используем современные технологии и качественные материалы для долговечности и надежности.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
+                        <div class="mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                           </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Отделочные работы</h3>
+                        <p class="text-gray-400">Комплексная внутренняя и внешняя отделка. Создаем эстетически привлекательные и функциональные пространства для жизни и работы.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
+                        <div class="mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Монтаж систем</h3>
+                        <p class="text-gray-400">Профессиональный монтаж инженерных систем: отопление, вентиляция, водоснабжение, электрика. Гарантия безопасности и эффективности.</p>
+                    </div>
+                     <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
+                        <div class="mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Демонтаж</h3>
+                        <p class="text-gray-400">Выполняем профессиональный и аккуратный демонтаж старых построек и конструкций.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 flex items-center justify-center md:p-8">
+                        <h2 class="text-8xl md:text-9xl font-extrabold tracking-wider select-none text-center">
+                            <span class="text-amber-500">БИ</span><span class="text-white">КО</span>
+                        </h2>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-extrabold text-white mb-4">О Нашей Компании</h2>
+                        <p class="text-gray-300 mb-4 text-lg">
+                            <span class="font-semibold"><span class="text-amber-500">БИ</span><span class="text-white">КО</span></span> — это команда высококвалифицированных специалистов, объединенных общей целью: создавать качественные, надежные и современные объекты. Мы работаем на рынке более 5 лет, успешно реализуя проекты различной сложности.
+                        </p>
+                        <p class="text-gray-300 mb-6">
+                            Наш главный принцип — индивидуальный подход к каждому клиенту и строгий контроль качества на всех этапах работ, от проектирования до сдачи объекта. Мы гордимся своей репутацией и стремимся превосходить ожидания.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Выгодные скидки до 50% на объемные заказы</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Гарантия качества на все виды работ</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Соблюдение сроков и бюджета проекта</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Использование только сертифицированных материалов</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-white">Отзывы наших клиентов</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Что говорят о нас те, кто нам доверился.</p>
+                </div>
+                <!-- Swiper -->
+                <div class="swiper testimonials-slider relative group">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide">
+                            <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-500/20 flex flex-col">
+                                <div class="flex-grow">
+                                    <svg class="w-10 h-10 text-amber-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path></svg>
+                                    <p class="text-gray-300 mb-4 sm:mb-6">"Работали с данной компанией над возведением и дальнейшем обслуживанием нашего развлекательного комплекса 'Муравейник' в ТЦ People's Park, г. Улан-Удэ. Все было выполнено в срок, качество на высшем уровне. Профессиональный подход и внимание к деталям. Очень довольны результатом!"</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <p class="font-bold text-white">Виктор</p>
+                                            <p class="text-sm text-gray-400">Компания 'От А до Я'</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mt-4 text-amber-500">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide">
+                            <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-500/20 flex flex-col">
+                                <div class="flex-grow">
+                                    <svg class="w-10 h-10 text-amber-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path></svg>
+                                    <p class="text-gray-300 mb-4 sm:mb-6">"Заказывали комплексный ремонт офиса. Команда показала себя как надежный подрядчик. Все работы по отделке и монтажу инженерных систем были выполнены безупречно. Рекомендуем!"</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <p class="font-bold text-white">Мария Иванова</p>
+                                            <p class="text-sm text-gray-400">Директор ООО 'Перспектива'</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mt-4 text-amber-500">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide">
+                           <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-500/20 flex flex-col">
+                                <div class="flex-grow">
+                                    <svg class="w-10 h-10 text-amber-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path></svg>
+                                    <p class="text-gray-300 mb-4 sm:mb-6">"Прозрачная смета, соблюдение сроков и отличное качество работ. Помогли нам с отделкой квартиры в новостройке. Бригада работала аккуратно и быстро. Однозначно будем советовать друзьям."</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <p class="font-bold text-white">Варитлов Константин</p>
+                                            <p class="text-sm text-gray-400">Владелец квартиры</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mt-4 text-amber-500">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 4 -->
+                        <div class="swiper-slide">
+                           <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-500/20 flex flex-col">
+                                <div class="flex-grow">
+                                    <svg class="w-10 h-10 text-amber-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path></svg>
+                                    <p class="text-gray-300 mb-4 sm:mb-6">"Обратились для демонтажа старого гаража. Все сделали быстро, аккуратно и, что самое главное, вывезли весь строительный мусор. Очень ответственный подход к работе. Будем обращаться еще!"</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <p class="font-bold text-white">Ирина и Сергей Новиковы</p>
+                                            <p class="text-sm text-gray-400">Владельцы загородного дома</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mt-4 text-amber-500">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination mt-6 relative !bottom-auto md:hidden"></div>
+                    
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-prev hidden md:flex items-center justify-center absolute top-1/2 left-0 transform -translate-y-1/2 w-12 h-12 bg-gray-800/60 rounded-full text-white cursor-pointer z-10 -ml-6 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:ml-4 hover:bg-amber-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </div>
+                    <div class="swiper-button-next hidden md:flex items-center justify-center absolute top-1/2 right-0 transform -translate-y-1/2 w-12 h-12 bg-gray-800/60 rounded-full text-white cursor-pointer z-10 -mr-6 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:mr-4 hover:bg-amber-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-white">Портфолио</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Реальные объекты, которые мы построили в Улан-Удэ и регионе.</p>
+                </div>
+                <div class="swiper portfolio-slider relative group">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="portfolio-card rounded-2xl border border-gray-700 overflow-hidden shadow-xl hover:shadow-amber-500/20 transition-all duration-300">
+                                <img src="/portfolio1.png" alt="Детский комплекс" loading="lazy" class="portfolio-card-image" />
+                                <div class="p-6 sm:p-8">
+                                    <div class="inline-flex items-center portfolio-chip rounded-full px-3 py-1 text-xs font-semibold text-amber-300 mb-4">Завершенный проект</div>
+                                    <h3 class="text-2xl font-bold text-white mb-4">Объект: Детский комплекс</h3>
+                                    <p class="text-gray-300 mb-2"><span class="text-gray-400">Время возведения:</span> 3 месяца</p>
+                                    <div class="flex items-center gap-3 mt-4">
+                                        <span class="text-gray-400">Уровень сложности:</span>
+                                        <div class="flex text-amber-400" aria-label="5 из 5">
+                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="portfolio-card rounded-2xl border border-gray-700 overflow-hidden shadow-xl hover:shadow-amber-500/20 transition-all duration-300">
+                                <img src="/portfolio2.png" alt="Дом 120 квадратных метров" loading="lazy" class="portfolio-card-image" />
+                                <div class="p-6 sm:p-8">
+                                    <div class="inline-flex items-center portfolio-chip rounded-full px-3 py-1 text-xs font-semibold text-amber-300 mb-4">Завершенный проект</div>
+                                    <h3 class="text-2xl font-bold text-white mb-4">Объект: Дом 120м²</h3>
+                                    <p class="text-gray-300 mb-2"><span class="text-gray-400">Время возведения:</span> 2 месяца</p>
+                                    <div class="flex items-center gap-3 mt-4">
+                                        <span class="text-gray-400">Уровень сложности:</span>
+                                        <div class="flex text-amber-400" aria-label="3 из 5">
+                                            <span>★</span><span>★</span><span>★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="portfolio-pagination mt-6 relative !bottom-auto md:hidden"></div>
+                    <div class="portfolio-button-prev hidden md:flex items-center justify-center absolute top-1/2 left-0 transform -translate-y-1/2 w-12 h-12 bg-gray-800/60 rounded-full text-white cursor-pointer z-10 -ml-6 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:ml-4 hover:bg-amber-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </div>
+                    <div class="portfolio-button-next hidden md:flex items-center justify-center absolute top-1/2 right-0 transform -translate-y-1/2 w-12 h-12 bg-gray-800/60 rounded-full text-white cursor-pointer z-10 -mr-6 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:mr-4 hover:bg-amber-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden lg:grid lg:grid-cols-2 lg:gap-4">
+                    <div class="pt-10 pb-4 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
+                        <div class="lg:self-center">
+                            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                                <span class="block">Готовы начать проект?</span>
+                                <span class="block text-amber-500">Свяжитесь с нами.</span>
+                            </h2>
+                            <p class="mt-4 text-lg leading-6 text-gray-300">
+                                Оставьте свой номер телефона, и наш менеджер свяжется с вами в ближайшее время для бесплатной консультации и расчета стоимости вашего проекта.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center p-6 sm:p-10 lg:p-12">
+                        <form id="phoneForm" action="send_to_telegram.php" method="POST" class="w-full max-w-sm space-y-4">
+                            <div class="form-group flex flex-col items-center gap-4 w-full">
+                                <input
+                                    id="phone"
+                                    name="phone"
+                                    type="tel"
+                                    placeholder="+7 (XXX) XXX-XX-XX"
+                                    required
+                                    class="w-full px-4 py-3 bg-gray-700 border-2 border-gray-600 rounded-lg text-white placeholder-gray-400 text-base focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors duration-300"
+                                />
+                                <span class="text-xs text-gray-500 text-center">
+                                    Отправляя заявку, вы соглашаетесь с политикой обработки персональных данных
+                                </span>
+                                <input
+                                    id="send-button"
+                                    type="submit"
+                                    value="Отправить"
+                                    class="w-full inline-flex items-center justify-center gap-2 px-7 py-3 font-semibold text-white rounded-xl text-base transition-all duration-300 ease-in-out cursor-pointer bg-gradient-to-r from-amber-600 to-amber-500 shadow-lg shadow-amber-500/20 hover:shadow-xl hover:shadow-amber-500/30 hover:-translate-y-1"
+                                />
+                            </div>
+                            <p id="form-error-message" class="text-red-500 text-sm text-center hidden"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700">
+      <div class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Column 1: Company Info -->
+          <div class="col-span-1 md:col-span-2 lg:col-span-1">
+            <div class="text-2xl font-bold tracking-wider mb-4">
+              <a href="#"><span class="text-amber-500">БИ</span><span class="text-white">КО</span></a>
+            </div>
+            <p class="text-gray-400 mb-4 max-w-xs">
+              Ваш надежный партнер в мире строительства. Качество, надежность и профессионализм.
+            </p>
+            <div class="flex space-x-4 mt-6">
+              <a href="https://t.me/rrezerv" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-amber-500 transition-colors duration-300" aria-label="Telegram">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.88l-1.44 6.93c-.1.49-.4.61-.8.38l-2.2-1.62-1.06 1.02c-.12.12-.22.22-.44.22l.16-2.26 4.1-3.72c.18-.16-.04-.25-.28-.09l-5.1 3.2-2.14-.66c-.48-.15-.49-.45.1-.68l8.5-3.32c.39-.15.75.1.63.58z" /></svg>
+              </a>
+            </div>
+          </div>
+    
+          <!-- Column 2: Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Навигация</h3>
+            <ul class="space-y-2">
+              <li><a href="#hero" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Главная</a></li>
+              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Услуги</a></li>
+              <li><a href="#about" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">О нас</a></li>
+              <li><a href="#testimonials" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Отзывы</a></li>
+              <li><a href="#portfolio" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Портфолио</a></li>
+              <li><a href="#contact" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Контакты</a></li>
+              <li><a href="portfolio.html" class="auth-link hidden text-gray-400 hover:text-amber-500 transition-colors duration-300">Портфолио</a></li>
+            </ul>
+          </div>
+    
+          <!-- Column 3: Services -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Наши Услуги</h3>
+            <ul class="space-y-2">
+              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Строительство</a></li>
+              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Отделочные работы</a></li>
+              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Монтаж систем</a></li>
+              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Демонтаж</a></li>
+            </ul>
+          </div>
+    
+          <!-- Column 4: Contacts -->
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-4">Контакты</h3>
+            <ul class="space-y-3 text-gray-400">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 mt-1 mr-3 text-amber-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span>г. Улан-Удэ, Россия</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-3 text-amber-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                <a href="tel:+79887219988" class="hover:text-amber-500 transition-colors duration-300">+7 (988) 721-99-88</a>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-3 text-amber-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <a href="mailto:info@biko.com" class="hover:text-amber-500 transition-colors duration-300">info@biko.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">
+          <p>&copy; <span id="current-year"></span> БИКО. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div id="fab-container" class="fixed bottom-6 right-6 z-50">
+        <div id="fab-menu" class="flex flex-col items-center space-y-3 mb-3 transition-all duration-300 ease-in-out opacity-0 translate-y-4 pointer-events-none">
+            <a href="https://t.me/rrezerv" target="_blank" rel="noopener noreferrer" class="group relative flex items-center justify-center w-14 h-14 bg-blue-500 rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-300" aria-label="Связаться в Telegram">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.88l-1.44 6.93c-.1.49-.4.61-.8.38l-2.2-1.62-1.06 1.02c-.12.12-.22.22-.44.22l.16-2.26 4.1-3.72c.18-.16-.04-.25-.28-.09l-5.1 3.2-2.14-.66c-.48-.15-.49-.45.1-.68l8.5-3.32c.39-.15.75.1.63.58z" />
+                </svg>
+                <span class="absolute right-full mr-3 px-3 py-1.5 bg-gray-700 text-white text-sm rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    Telegram
+                </span>
+            </a>
+            
+            <a href="tel:+79887219988" class="group relative flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300" aria-label="Позвонить нам">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span class="absolute right-full mr-3 px-3 py-1.5 bg-gray-700 text-white text-sm rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    Позвонить
+                </span>
+            </a>
+        </div>
+
+        <button id="fab-button" class="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center text-white shadow-xl hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-amber-500 transition-transform duration-300 ease-in-out transform hover:scale-110" aria-expanded="false" aria-label="Открыть меню контактов">
+            <div id="fab-icon-wrapper" class="transition-transform duration-300 ease-in-out">
+                <svg id="fab-message-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                <svg id="fab-close-icon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+        </button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          // --- Auth UI Logic ---
+          const handleAuthUI = () => {
+              const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+              const authLinks = document.querySelectorAll('.auth-link');
+              const noAuthLinks = document.querySelectorAll('.no-auth-link');
+              const logoutLinks = document.querySelectorAll('.logout-link');
+
+              if (isAuthenticated) {
+                  authLinks.forEach(el => { if(el) el.classList.remove('hidden') });
+                  noAuthLinks.forEach(el => { if(el) el.classList.add('hidden') });
+              } else {
+                  authLinks.forEach(el => { if(el) el.classList.add('hidden') });
+                  noAuthLinks.forEach(el => { if(el) el.classList.remove('hidden') });
+              }
+              
+              logoutLinks.forEach(link => {
+                  if (link) {
+                      link.addEventListener('click', (e) => {
+                          e.preventDefault();
+                          localStorage.removeItem('isAuthenticated');
+                          window.location.reload();
+                      });
+                  }
+              });
+          };
+          handleAuthUI();
+
+          // --- Theme Toggle Logic ---
+          const themeToggle = document.getElementById('theme-toggle');
+          const themeIcon = document.getElementById('theme-icon');
+          const themeStorageKey = 'siteTheme';
+          const lightThemeIcon = '<svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 100-12 6 6 0 000 12zm0 4a1 1 0 011 1v0a1 1 0 11-2 0v0a1 1 0 011-1zm0-20a1 1 0 011-1v0a1 1 0 11-2 0v0a1 1 0 011-1zm10 10a1 1 0 010 2h0a1 1 0 110-2h0zM2 12a1 1 0 010 2h0a1 1 0 110-2h0zm16.95 6.536a1 1 0 011.414 0h0a1 1 0 01-1.414 1.414h0a1 1 0 010-1.414zM3.636 5.05a1 1 0 011.414 0h0A1 1 0 113.636 6.464h0a1 1 0 010-1.414zm15.314-1.414a1 1 0 011.414 1.414h0a1 1 0 01-1.414-1.414zM3.636 17.536a1 1 0 011.414 1.414h0a1 1 0 01-1.414-1.414z"/></svg>';
+          const darkThemeIcon = '<svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M21 14.5A9 9 0 119.5 3 7 7 0 0021 14.5z"/></svg>';
+
+          const setTheme = (theme) => {
+              const isLightTheme = theme === 'light';
+              document.body.classList.toggle('light-theme', isLightTheme);
+              if (themeIcon) {
+                  themeIcon.innerHTML = isLightTheme ? lightThemeIcon : darkThemeIcon;
+              }
+              localStorage.setItem(themeStorageKey, isLightTheme ? 'light' : 'dark');
+          };
+
+          setTheme(localStorage.getItem(themeStorageKey) || 'dark');
+
+          if (themeToggle) {
+              themeToggle.addEventListener('click', () => {
+                  const nextTheme = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+                  setTheme(nextTheme);
+              });
+          }
+
+          // --- Header Scroll Effect ---
+          const header = document.getElementById('main-header');
+          if (header) {
+              const handleScroll = () => {
+                  if (window.scrollY > 10) {
+                      header.classList.add('bg-gray-900/80', 'backdrop-blur-lg', 'shadow-xl', 'header-solid');
+                      header.classList.remove('bg-transparent');
+                  } else {
+                      header.classList.remove('bg-gray-900/80', 'backdrop-blur-lg', 'shadow-xl', 'header-solid');
+                      header.classList.add('bg-transparent');
+                  }
+              };
+              window.addEventListener('scroll', handleScroll);
+              handleScroll();
+          }
+
+          // --- Mobile Menu Logic ---
+          const mobileMenuButton = document.getElementById('mobile-menu-button');
+          const mobileMenu = document.getElementById('mobile-menu');
+          const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+          const hamburgerIcon = document.getElementById('hamburger-icon');
+          const closeIcon = document.getElementById('close-icon');
+
+          const openMenu = () => {
+              mobileMenu.classList.remove('hidden');
+              document.body.classList.add('overflow-hidden');
+              mobileMenuButton.setAttribute('aria-expanded', 'true');
+              mobileMenuButton.setAttribute('aria-label', 'Закрыть меню');
+              if (hamburgerIcon && closeIcon) {
+                  hamburgerIcon.classList.add('hidden');
+                  closeIcon.classList.remove('hidden');
+              }
+          };
+
+          const closeMenu = () => {
+              mobileMenu.classList.add('hidden');
+              document.body.classList.remove('overflow-hidden');
+              mobileMenuButton.setAttribute('aria-expanded', 'false');
+              mobileMenuButton.setAttribute('aria-label', 'Открыть меню');
+              if (hamburgerIcon && closeIcon) {
+                  hamburgerIcon.classList.remove('hidden');
+                  closeIcon.classList.add('hidden');
+              }
+          };
+
+          if (mobileMenuButton && mobileMenu) {
+              mobileMenuButton.addEventListener('click', () => {
+                  const isMenuOpen = !mobileMenu.classList.contains('hidden');
+                  if (isMenuOpen) {
+                      closeMenu();
+                  } else {
+                      openMenu();
+                  }
+              });
+          }
+          
+          mobileMenuLinks.forEach(link => {
+              link.addEventListener('click', closeMenu);
+          });
+
+
+          // --- Contact Form Logic ---
+          const phoneForm = document.getElementById('phoneForm');
+          if (phoneForm) {
+              phoneForm.addEventListener('submit', async function(event) {
+                  event.preventDefault();
+
+                  const form = this;
+                  const submitButton = form.querySelector('input[type="submit"]');
+                  const phoneInput = form.querySelector('input[type="tel"]');
+                  const errorMessage = document.getElementById('form-error-message');
+                  const phone = phoneInput.value.trim();
+
+                  if (!phone) {
+                      if (errorMessage) {
+                          errorMessage.textContent = 'Пожалуйста, введите номер телефона';
+                          errorMessage.classList.remove('hidden');
+                      }
+                      return;
+                  }
+
+                  // Отключаем кнопку и показываем загрузку
+                  submitButton.disabled = true;
+                  submitButton.value = 'Отправка...';
+                  submitButton.classList.add('opacity-70', 'cursor-wait');
+                  if (errorMessage) errorMessage.classList.add('hidden');
+
+                  try {
+                      const response = await fetch('send_to_telegram.php', {
+                          method: 'POST',
+                          headers: {
+                              'Content-Type': 'application/x-www-form-urlencoded',
+                          },
+                          body: 'phone=' + encodeURIComponent(phone)
+                      });
+
+                      const result = await response.json();
+
+                      if (result.success) {
+                          submitButton.value = 'Мы вам перезвоним!';
+                          submitButton.classList.remove('from-amber-600', 'to-amber-500', 'shadow-amber-500/20', 'hover:shadow-amber-500/30');
+                          submitButton.classList.add('bg-green-600', 'hover:bg-green-700', 'shadow-green-500/20', 'hover:shadow-green-500/30');
+                          submitButton.classList.remove('opacity-70', 'cursor-wait');
+                          submitButton.disabled = true;
+                          phoneInput.disabled = true;
+                          phoneInput.value = '';
+                      } else {
+                          throw new Error(result.message || 'Ошибка при отправке');
+                      }
+                  } catch (error) {
+                      submitButton.disabled = false;
+                      submitButton.value = 'Отправить';
+                      submitButton.classList.remove('opacity-70', 'cursor-wait');
+                      if (errorMessage) {
+                          errorMessage.textContent = error.message || 'Произошла ошибка при отправке';
+                          errorMessage.classList.remove('hidden');
+                      }
+                  }
+              });
+          }
+
+          // --- Floating Action Button Logic ---
+          const fabContainer = document.getElementById('fab-container');
+          if (fabContainer) {
+              const fabButton = document.getElementById('fab-button');
+              const fabMenu = document.getElementById('fab-menu');
+              const fabIconWrapper = document.getElementById('fab-icon-wrapper');
+              const messageIcon = document.getElementById('fab-message-icon');
+              const closeIcon = document.getElementById('fab-close-icon');
+
+              fabButton.addEventListener('click', (e) => {
+                  e.stopPropagation();
+                  const isOpen = fabContainer.classList.toggle('open');
+                  fabButton.setAttribute('aria-expanded', isOpen);
+
+                  if (isOpen) {
+                      fabMenu.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+                      fabMenu.classList.add('opacity-100', 'translate-y-0');
+                      fabIconWrapper.style.transform = 'rotate(135deg)';
+                      messageIcon.classList.add('hidden');
+                      closeIcon.classList.remove('hidden');
+                  } else {
+                      fabMenu.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+                      fabMenu.classList.remove('opacity-100', 'translate-y-0');
+                      fabIconWrapper.style.transform = 'rotate(0deg)';
+                      messageIcon.classList.remove('hidden');
+                      closeIcon.classList.add('hidden');
+                  }
+              });
+
+              document.addEventListener('click', (event) => {
+                  if (!fabContainer.contains(event.target) && fabContainer.classList.contains('open')) {
+                      fabButton.click();
+                  }
+              });
+          }
+
+          // --- Footer Year ---
+          const yearSpan = document.getElementById('current-year');
+          if (yearSpan) {
+              yearSpan.textContent = new Date().getFullYear();
+          }
+
+          // --- Testimonials Slider ---
+          if (typeof Swiper !== 'undefined') {
+              const testimonialsSlider = new Swiper('.testimonials-slider', {
+                  loop: true,
+                  grabCursor: true,
+                  spaceBetween: 20,
+                  autoHeight: true,
+                  pagination: {
+                      el: '.testimonials-slider .swiper-pagination',
+                      clickable: true,
+                  },
+                  navigation: {
+                      nextEl: '.testimonials-slider .swiper-button-next',
+                      prevEl: '.testimonials-slider .swiper-button-prev',
+                  },
+                  breakpoints: {
+                      768: {
+                          slidesPerView: 2,
+                          spaceBetween: 30,
+                          autoHeight: false,
+                      },
+                      1024: {
+                          slidesPerView: 2,
+                          spaceBetween: 30,
+                          autoHeight: false,
+                      }
+                  }
+              });
+
+              const portfolioSlider = new Swiper('.portfolio-slider', {
+                  loop: true,
+                  grabCursor: true,
+                  spaceBetween: 20,
+                  autoHeight: true,
+                  pagination: {
+                      el: '.portfolio-pagination',
+                      clickable: true,
+                  },
+                  navigation: {
+                      nextEl: '.portfolio-button-next',
+                      prevEl: '.portfolio-button-prev',
+                  },
+                  breakpoints: {
+                      768: {
+                          slidesPerView: 2,
+                          spaceBetween: 30,
+                          autoHeight: false,
+                      }
+                  }
+              });
+          }
+      });
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

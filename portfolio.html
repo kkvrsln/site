@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио - БИКО</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        background-color: #111827; /* Match body bg-gray-900 */
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #f59e0b;
+        border-radius: 10px;
+        border: 2px solid #1a1a1a;
+      }
+      .hidden {
+        display: none;
+      }
+      body,
+      header,
+      section,
+      footer,
+      div,
+      nav,
+      a,
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      span,
+      li,
+      button {
+        transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+      }
+      body.light-theme {
+        background-color: #f8fafc !important;
+        color: #0f172a !important;
+      }
+      body.light-theme .bg-gray-900,
+      body.light-theme .bg-gray-900\/95,
+      body.light-theme .bg-gray-900\/80,
+      body.light-theme .bg-gray-800,
+      body.light-theme .bg-black\/20,
+      body.light-theme .bg-black\/30 {
+        background-color: #f8fafc !important;
+      }
+      body.light-theme .text-white,
+      body.light-theme .text-gray-300,
+      body.light-theme .text-gray-400,
+      body.light-theme .text-gray-500 {
+        color: #0f172a !important;
+      }
+      body.light-theme .border-gray-700,
+      body.light-theme .border-gray-800,
+      body.light-theme .border-gray-900 {
+        border-color: #cbd5e1 !important;
+      }
+      body.light-theme #mobile-menu {
+        background-color: rgba(248, 250, 252, 0.96) !important;
+      }
+      .theme-toggle {
+        position: relative;
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(245, 158, 11, 0.6);
+        background: radial-gradient(circle at 30% 30%, rgba(251, 191, 36, 0.2), rgba(17, 24, 39, 0.9));
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #f59e0b;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        transform: translateZ(0);
+      }
+      .theme-toggle:hover {
+        transform: translateY(-1px) scale(1.03);
+        box-shadow: 0 10px 22px rgba(245, 158, 11, 0.28);
+      }
+      .theme-toggle:active {
+        transform: scale(0.97);
+      }
+      #theme-icon {
+        display: inline-flex;
+        width: 1.05rem;
+        height: 1.05rem;
+        line-height: 1;
+      }
+      #theme-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+      #main-header .logo-ko {
+        color: #ffffff !important;
+        transition: color 0.35s ease;
+      }
+      body.light-theme #main-header.header-solid .logo-ko {
+        color: #0f172a !important;
+      }
+      body.light-theme .text-gray-300,
+      body.light-theme .text-gray-400 {
+        color: #1e293b !important;
+      }
+      body.light-theme .theme-toggle {
+        background: radial-gradient(circle at 30% 30%, rgba(245, 158, 11, 0.32), rgba(255, 255, 255, 0.96));
+        border-color: rgba(217, 119, 6, 0.5);
+        box-shadow: 0 10px 20px rgba(217, 119, 6, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+      }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased">
+    <script>
+      // Page Protection
+      if (localStorage.getItem('isAuthenticated') !== 'true') {
+        window.location.href = 'login.html';
+      }
+    </script>
+
+    <!-- Header -->
+    <header id="main-header" class="sticky top-0 left-0 right-0 z-50 transition-all duration-300 bg-gray-900/80 backdrop-blur-lg shadow-xl header-solid">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-bold tracking-wider">
+          <span class="text-amber-500">БИ</span><span class="text-white logo-ko">КО</span>
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="index.html#hero" class="text-gray-300 hover:text-amber-400 transition cursor-pointer">Главная</a>
+          <a href="index.html#services" class="text-gray-300 hover:text-amber-400 transition cursor-pointer">Услуги</a>
+          <a href="index.html#about" class="text-gray-300 hover:text-amber-400 transition cursor-pointer">О нас</a>
+          <a href="portfolio.html" class="auth-link text-amber-500 font-semibold cursor-pointer">Портфолио</a>
+          <a href="#" class="logout-link auth-link text-gray-300 hover:text-amber-400 transition cursor-pointer">Выйти</a>
+        </nav>
+        <div class="no-auth-link hidden">
+            <a href="index.html#contact" class="hidden md:block bg-amber-500 hover:bg-amber-600 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-105">
+              Заказать звонок
+            </a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+            <span id="theme-icon" class="text-lg leading-none"></span>
+          </button>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+              <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+              <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+     <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900/95 z-40 backdrop-blur-sm transition-opacity duration-300 ease-in-out">
+        <div class="flex flex-col items-center justify-center h-full text-center">
+            <nav class="flex flex-col space-y-8">
+                <a href="index.html#hero" class="mobile-menu-link text-3xl text-gray-300 hover:text-amber-400 transition">Главная</a>
+                <a href="index.html#services" class="mobile-menu-link text-3xl text-gray-300 hover:text-amber-400 transition">Услуги</a>
+                <a href="index.html#about" class="mobile-menu-link text-3xl text-gray-300 hover:text-amber-400 transition">О нас</a>
+                <a href="portfolio.html" class="mobile-menu-link auth-link text-3xl text-amber-500 font-semibold">Портфолио</a>
+                <a href="#" class="mobile-menu-link logout-link auth-link text-3xl text-gray-300 hover:text-amber-400 transition">Выйти</a>
+            </nav>
+            <div class="mt-12 no-auth-link hidden">
+                <a href="index.html#contact" class="mobile-menu-link bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-full transition-transform duration-300 hover:scale-105 text-xl">
+                  Заказать звонок
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-white">Наши работы</h1>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Примеры успешно завершенных проектов, которыми мы гордимся.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Project 1 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop" alt="Проект 1" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-white">Строительство коттеджа</h3>
+                            <p class="text-gray-400 mb-4">Современный двухэтажный коттедж, построенный по индивидуальному проекту с использованием энергоэффективных материалов.</p>
+                            <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-center"><span class="text-amber-500 mr-2">&#10003;</span>Площадь: 180 м²</li>
+                                <li class="flex items-center"><span class="text-amber-500 mr-2">&#10003;</span>Срок: 5 месяцев</li>
+                                <li class="flex items-center"><span class="text-amber-500 mr-2">&#10003;</span>Работы: фундамент, возведение стен, кровля, фасад, монтаж коммуникаций.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
+                        <img src="https://images.unsplash.com/photo-1585412727339-349079173887?q=80&w=1920&auto=format&fit=crop" alt="Проект 2" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-white">Ремонт квартиры "под ключ"</h3>
+                            <p class="text-gray-400 mb-4">Комплексный ремонт трехкомнатной квартиры в новостройке. Дизайнерская отделка, перепланировка и полная замена инженерных систем.</p>
+                             <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-center"><span class="text-amber-500 mr-2">&#10003;</span>Площадь: 95 м²</li>
+                                <li class="flex items-center"><span class="text-amber-500 mr-2">&#10003;</span>Срок: 3 месяца</li>
+                                <li class="flex items-center"><span class="text-amber-500 mr-2">&#10003;</span>Работы: демонтаж, электромонтаж, сантехника, штукатурка, укладка покрытий, финишная отделка.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1920&auto=format&fit=crop" alt="Проект 3" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-3 text-white">Отделка фасада и благоустройство</h3>
+                            <p class="text-gray-400 mb-4">Обновление фасада частного дома с использованием декоративной штукатурки и монтаж террасы из лиственницы.</p>
+                             <ul class="text-gray-300 space-y-2 text-sm">
+                                <li class="flex items-center"><span class="text-amber-500 mr-2">&#10003;</span>Объект: Частный дом</li>
+                                <li class="flex items-center"><span class="text-amber-500 mr-2">&#10003;</span>Срок: 1 месяц</li>
+                                <li class="flex items-center"><span class="text-amber-500 mr-2">&#10003;</span>Работы: утепление, нанесение штукатурки "короед", покраска, монтаж террасной доски, установка ограждений.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700">
+      <div class="container mx-auto px-6 py-8">
+        <div class="flex flex-col items-center text-center">
+          <div class="text-2xl font-bold tracking-wider mb-4">
+            <span class="text-amber-500">БИ</span><span class="text-white">КО</span>
+          </div>
+          <p class="max-w-md text-gray-400 mb-4">
+            Ваш надежный партнер в мире строительства. Качество, надежность и профессионализм.
+          </p>
+          <div class="flex space-x-6 mb-4">
+            <a href="mailto:info@biko.com" class="text-gray-300 hover:text-amber-400 transition">info@biko.com</a>
+            <a href="tel:+79887219988" class="text-gray-300 hover:text-amber-400 transition">+7 (988) 721-99-88</a>
+          </div>
+          <p class="text-gray-500 text-sm">
+            © <span id="current-year"></span> БИКО. Все права защищены.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Auth UI Logic ---
+            const handleAuthUI = () => {
+                const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+                const authLinks = document.querySelectorAll('.auth-link');
+                const noAuthLinks = document.querySelectorAll('.no-auth-link');
+                const logoutLinks = document.querySelectorAll('.logout-link');
+
+                if (isAuthenticated) {
+                    authLinks.forEach(el => el.classList.remove('hidden'));
+                    noAuthLinks.forEach(el => el.classList.add('hidden'));
+                } else {
+                    authLinks.forEach(el => el.classList.add('hidden'));
+                    noAuthLinks.forEach(el => el.classList.remove('hidden'));
+                }
+                
+                logoutLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        localStorage.removeItem('isAuthenticated');
+                        window.location.href = 'index.html';
+                    });
+                });
+            }
+            handleAuthUI();
+
+            // --- Theme Toggle Logic ---
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const themeStorageKey = 'siteTheme';
+            const lightThemeIcon = 'https://cdn-icons-png.flaticon.com/512/566/566410.png';
+            const darkThemeIcon = 'https://cdn-icons-png.flaticon.com/512/566/566461.png';
+
+            const setTheme = (theme) => {
+                const isLightTheme = theme === 'light';
+                document.body.classList.toggle('light-theme', isLightTheme);
+                if (themeIcon) {
+                    themeIcon.innerHTML = `<img src="${isLightTheme ? lightThemeIcon : darkThemeIcon}" alt="Иконка темы">`;
+                }
+                localStorage.setItem(themeStorageKey, isLightTheme ? 'light' : 'dark');
+            };
+
+            setTheme(localStorage.getItem(themeStorageKey) || 'dark');
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const nextTheme = document.body.classList.contains('light-theme') ? 'dark' : 'light';
+                    setTheme(nextTheme);
+                });
+            }
+
+            // --- Mobile Menu Logic ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            const openMenu = () => {
+                mobileMenu.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'true');
+                mobileMenuButton.setAttribute('aria-label', 'Закрыть меню');
+                if (hamburgerIcon && closeIcon) {
+                    hamburgerIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                }
+            };
+
+            const closeMenu = () => {
+                mobileMenu.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.setAttribute('aria-label', 'Открыть меню');
+                if (hamburgerIcon && closeIcon) {
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            };
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    const isMenuOpen = !mobileMenu.classList.contains('hidden');
+                    if (isMenuOpen) {
+                        closeMenu();
+                    } else {
+                        openMenu();
+                    }
+                });
+            }
+          
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // --- Footer Year ---
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
