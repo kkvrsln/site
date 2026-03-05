@@ -197,6 +197,27 @@
         background: rgba(245, 158, 11, 0.16);
         border: 1px solid rgba(245, 158, 11, 0.35);
       }
+      .promo-banner-card {
+        background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        box-shadow: 0 16px 40px rgba(2, 6, 23, 0.35);
+      }
+      .promo-banner-glow {
+        position: absolute;
+        inset: -1px;
+        border-radius: 1.2rem;
+        background: linear-gradient(130deg, rgba(245, 158, 11, 0.5), rgba(251, 191, 36, 0.05), rgba(56, 189, 248, 0.35));
+        opacity: 0;
+        transition: opacity 0.35s ease;
+      }
+      .swiper-slide-active .promo-banner-glow {
+        opacity: 1;
+      }
+      body.light-theme .promo-banner-card {
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(241, 245, 249, 0.93));
+        border-color: rgba(148, 163, 184, 0.35);
+        box-shadow: 0 16px 35px rgba(148, 163, 184, 0.35);
+      }
     </style>
     <link rel="stylesheet" href="/index.css">
     <script type="application/ld+json">
@@ -290,6 +311,60 @@
                 <a href="#contact" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-3 px-8 text-base md:py-4 md:px-10 md:text-lg rounded-full transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg inline-block">
                     Получить консультацию
                 </a>
+            </div>
+        </section>
+
+        <section id="hero-banners" class="py-14 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                    <div>
+                        <p class="text-amber-400 uppercase tracking-[0.25em] text-xs font-semibold mb-2">Спецпредложения</p>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-white">Актуальные баннеры для вашего проекта</h2>
+                    </div>
+                    <p class="text-gray-400 max-w-xl">Подберём выгодное решение под ваш бюджет: от фундамента до отделки. Слайды переключаются автоматически каждые 10 секунд.</p>
+                </div>
+
+                <div class="swiper hero-banners-slider overflow-visible">
+                    <div class="swiper-wrapper">
+                        <article class="swiper-slide h-auto">
+                            <div class="relative h-full rounded-2xl p-[1px]">
+                                <div class="promo-banner-glow"></div>
+                                <div class="promo-banner-card relative rounded-2xl p-7 md:p-8 h-full overflow-hidden">
+                                    <div class="absolute -right-12 -top-12 w-40 h-40 bg-amber-500/20 blur-3xl rounded-full"></div>
+                                    <p class="text-sm text-amber-400 font-semibold mb-3">Дом под ключ</p>
+                                    <h3 class="text-2xl font-bold text-white mb-4">Скидка до 15% на комплексное строительство</h3>
+                                    <p class="text-gray-300 mb-6">Проектирование, материалы, монтаж и отделка в одном договоре. Фиксируем стоимость и сроки.</p>
+                                    <a href="#contact" class="inline-flex items-center gap-2 text-amber-300 hover:text-amber-200 font-semibold">Получить расчёт <span aria-hidden="true">→</span></a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide h-auto">
+                            <div class="relative h-full rounded-2xl p-[1px]">
+                                <div class="promo-banner-glow"></div>
+                                <div class="promo-banner-card relative rounded-2xl p-7 md:p-8 h-full overflow-hidden">
+                                    <div class="absolute -right-10 top-1/2 -translate-y-1/2 w-36 h-36 bg-cyan-400/20 blur-3xl rounded-full"></div>
+                                    <p class="text-sm text-cyan-300 font-semibold mb-3">Ремонт квартир</p>
+                                    <h3 class="text-2xl font-bold text-white mb-4">Дизайн + ремонт в подарок при заказе от 60 м²</h3>
+                                    <p class="text-gray-300 mb-6">Современные материалы, прозрачная смета, ежедневный фотоотчёт и гарантия на все виды работ.</p>
+                                    <a href="#portfolio" class="inline-flex items-center gap-2 text-cyan-200 hover:text-cyan-100 font-semibold">Посмотреть работы <span aria-hidden="true">→</span></a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="swiper-slide h-auto">
+                            <div class="relative h-full rounded-2xl p-[1px]">
+                                <div class="promo-banner-glow"></div>
+                                <div class="promo-banner-card relative rounded-2xl p-7 md:p-8 h-full overflow-hidden">
+                                    <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-violet-500/20 blur-3xl rounded-full"></div>
+                                    <p class="text-sm text-violet-300 font-semibold mb-3">Инженерные системы</p>
+                                    <h3 class="text-2xl font-bold text-white mb-4">Бесплатный выезд инженера в день обращения</h3>
+                                    <p class="text-gray-300 mb-6">Монтаж отопления, электрики и водоснабжения с расчётом под энергоэффективность вашего дома.</p>
+                                    <a href="#services" class="inline-flex items-center gap-2 text-violet-200 hover:text-violet-100 font-semibold">Выбрать услугу <span aria-hidden="true">→</span></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="hero-banners-pagination mt-8 text-center"></div>
+                </div>
             </div>
         </section>
 
@@ -924,6 +999,28 @@
 
           // --- Testimonials Slider ---
           if (typeof Swiper !== 'undefined') {
+              const heroBannersSlider = new Swiper('.hero-banners-slider', {
+                  loop: true,
+                  grabCursor: true,
+                  spaceBetween: 20,
+                  slidesPerView: 1,
+                  autoplay: {
+                      delay: 10000,
+                      disableOnInteraction: false,
+                  },
+                  speed: 900,
+                  pagination: {
+                      el: '.hero-banners-pagination',
+                      clickable: true,
+                  },
+                  breakpoints: {
+                      1024: {
+                          slidesPerView: 2,
+                          spaceBetween: 28,
+                      }
+                  }
+              });
+
               const testimonialsSlider = new Swiper('.testimonials-slider', {
                   loop: true,
                   grabCursor: true,
