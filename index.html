@@ -197,6 +197,15 @@
         background: rgba(245, 158, 11, 0.16);
         border: 1px solid rgba(245, 158, 11, 0.35);
       }
+      .promo-banner-slide {
+        background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(17, 24, 39, 0.92));
+        border: 1px solid rgba(245, 158, 11, 0.25);
+        box-shadow: 0 24px 55px rgba(2, 6, 23, 0.35);
+      }
+      .promo-badges {
+        background: rgba(245, 158, 11, 0.14);
+        border: 1px solid rgba(245, 158, 11, 0.3);
+      }
     </style>
     <link rel="stylesheet" href="/index.css">
     <script type="application/ld+json">
@@ -290,6 +299,48 @@
                 <a href="#contact" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-3 px-8 text-base md:py-4 md:px-10 md:text-lg rounded-full transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg inline-block">
                     Получить консультацию
                 </a>
+            </div>
+        </section>
+
+        <section id="promo-banners" class="py-12 md:py-16 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="swiper promo-banners-slider pb-12">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="promo-banner-slide rounded-3xl p-7 md:p-9 h-full relative overflow-hidden">
+                                <div class="absolute -top-16 -right-14 w-44 h-44 bg-amber-500/20 blur-3xl"></div>
+                                <span class="promo-badges inline-flex items-center rounded-full px-4 py-1 text-xs uppercase tracking-[0.18em] text-amber-300">Весна 2026</span>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mt-4 mb-3">Скидка до 50% на отделочные работы</h3>
+                                <p class="text-gray-300 text-sm md:text-base">Подготовим дизайн, закупим материалы и выполним чистовую отделку под ключ с гарантией и прозрачной сметой.</p>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="promo-banner-slide rounded-3xl p-7 md:p-9 h-full relative overflow-hidden">
+                                <div class="absolute -top-16 -right-14 w-44 h-44 bg-cyan-500/20 blur-3xl"></div>
+                                <span class="promo-badges inline-flex items-center rounded-full px-4 py-1 text-xs uppercase tracking-[0.18em] text-cyan-200">Для новых клиентов</span>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mt-4 mb-3">Бесплатный выезд инженера за 24 часа</h3>
+                                <p class="text-gray-300 text-sm md:text-base">Оценим объект, предложим варианты и зафиксируем стоимость до начала работ — без скрытых доплат.</p>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="promo-banner-slide rounded-3xl p-7 md:p-9 h-full relative overflow-hidden">
+                                <div class="absolute -top-16 -right-14 w-44 h-44 bg-emerald-500/20 blur-3xl"></div>
+                                <span class="promo-badges inline-flex items-center rounded-full px-4 py-1 text-xs uppercase tracking-[0.18em] text-emerald-200">Под ключ</span>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mt-4 mb-3">Строительство домов с поэтапной оплатой</h3>
+                                <p class="text-gray-300 text-sm md:text-base">От фундамента до инженерных сетей: показываем прогресс каждую неделю и соблюдаем согласованные сроки.</p>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="promo-banner-slide rounded-3xl p-7 md:p-9 h-full relative overflow-hidden">
+                                <div class="absolute -top-16 -right-14 w-44 h-44 bg-violet-500/20 blur-3xl"></div>
+                                <span class="promo-badges inline-flex items-center rounded-full px-4 py-1 text-xs uppercase tracking-[0.18em] text-violet-200">Комфорт</span>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mt-4 mb-3">Фиксируем сроки в договоре</h3>
+                                <p class="text-gray-300 text-sm md:text-base">Работаем по календарному графику и предоставляем фото/видео-отчёты с каждого этапа строительства.</p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination promo-banners-pagination mt-8"></div>
+                </div>
             </div>
         </section>
 
@@ -924,11 +975,40 @@
 
           // --- Testimonials Slider ---
           if (typeof Swiper !== 'undefined') {
+              const promoBannersSlider = new Swiper('.promo-banners-slider', {
+                  loop: true,
+                  grabCursor: true,
+                  speed: 950,
+                  spaceBetween: 16,
+                  slidesPerView: 1,
+                  autoplay: {
+                      delay: 6000,
+                      disableOnInteraction: false,
+                      pauseOnMouseEnter: true,
+                  },
+                  pagination: {
+                      el: '.promo-banners-pagination',
+                      clickable: true,
+                  },
+                  breakpoints: {
+                      1024: {
+                          slidesPerView: 2,
+                          spaceBetween: 24,
+                      }
+                  }
+              });
+
               const testimonialsSlider = new Swiper('.testimonials-slider', {
                   loop: true,
                   grabCursor: true,
+                  speed: 900,
                   spaceBetween: 20,
                   autoHeight: true,
+                  autoplay: {
+                      delay: 6000,
+                      disableOnInteraction: false,
+                      pauseOnMouseEnter: true,
+                  },
                   pagination: {
                       el: '.testimonials-slider .swiper-pagination',
                       clickable: true,
