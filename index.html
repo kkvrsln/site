@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Строительная компания БИКО в Улан-Удэ - Строительство домов, ремонт квартир</title>
-    <meta name="description" content="Профессиональная строительная бригада 'БИКО' в Улан-Удэ. Строительство домов, гаражей, ремонт квартир под ключ. Скидки до 50% на объем! Гарантия качества. Закажите бесплатный расчет стоимости.">
-    <meta name="keywords" content="строительная компания улан-удэ, бригада строителей, строители, отделочники, ремонт дома, ремонт квартиры, ремонт квартиры в новостройке, строительство домов, строительство гаражей, демонтаж, бико улан-удэ">
+    <title>Рабочий резерв — грузчики и разнорабочие в Улан-Удэ с почасовой оплатой</title>
+    <meta name="description" content="Услуги грузчиков и разнорабочих в Улан-Удэ с почасовой оплатой. Переезды, погрузка/разгрузка, подъем стройматериалов, офисные и складские работы. Быстрый выезд, честный учет часов.">
+    <meta name="keywords" content="грузчики улан-удэ, разнорабочие улан-удэ, почасовая оплата грузчики, переезд с грузчиками, погрузка разгрузка, подъем стройматериалов, услуги рабочих">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
@@ -200,20 +200,94 @@
       .promo-banner-slide {
         background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(17, 24, 39, 0.92));
         border: 1px solid rgba(245, 158, 11, 0.25);
-        box-shadow: 0 24px 55px rgba(2, 6, 23, 0.35);
+        box-shadow: none;
       }
       .promo-badges {
         background: rgba(245, 158, 11, 0.14);
         border: 1px solid rgba(245, 158, 11, 0.3);
       }
+      body.light-theme #promo-banners {
+        background-color: #ffffff !important;
+      }
+      body.light-theme #promo-banners .promo-banner-slide {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        box-shadow: none;
+      }
+      body.light-theme #promo-banners .promo-badges {
+        background: #1e293b;
+        border: 1px solid #334155;
+        color: #e2e8f0 !important;
+      }
+      body.light-theme #promo-banners h3 {
+        color: #0f172a !important;
+      }
+      body.light-theme #promo-banners p {
+        color: #334155 !important;
+      }
+
+
+      .calc-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(2, 6, 23, 0.75);
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        z-index: 80;
+      }
+      .calc-modal-overlay.hidden {
+        display: none;
+      }
+      .calc-modal-card {
+        width: min(100%, 30rem);
+        border-radius: 1.25rem;
+        border: 1px solid rgba(245, 158, 11, 0.28);
+        background: linear-gradient(145deg, rgba(30, 41, 59, 0.96), rgba(15, 23, 42, 0.95));
+        box-shadow: 0 24px 48px rgba(2, 6, 23, 0.45);
+      }
+      .calc-modal-secondary {
+        background: rgba(15, 23, 42, 0.55);
+        border: 1px solid rgba(148, 163, 184, 0.35);
+      }
+      body.light-theme .calc-modal-overlay {
+        background: rgba(241, 245, 249, 0.72);
+      }
+      body.light-theme .calc-modal-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+      }
+      body.light-theme .calc-modal-card .text-white {
+        color: #0f172a !important;
+      }
+      body.light-theme .calc-modal-card .text-gray-300,
+      body.light-theme .calc-modal-card .text-gray-400 {
+        color: #475569 !important;
+      }
+      body.light-theme .calc-modal-secondary {
+        background: #f8fafc;
+        border: 1px solid #cbd5e1;
+      }
+      body.light-theme #calc-phone {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        border-color: #cbd5e1 !important;
+      }
+      body.light-theme #calc-phone::placeholder {
+        color: #64748b !important;
+      }
+
     </style>
     <link rel="stylesheet" href="/index.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "БИКО Construction",
-      "description": "Профессиональные услуги по строительству домов, гаражей, ремонту квартир и отделочным работам в Улан-Удэ.",
+      "@type": "MovingCompany",
+      "name": "Рабочий Резерв",
+      "description": "Почасовые услуги грузчиков и разнорабочих: переезды, погрузка/разгрузка, складские и подсобные работы в Улан-Удэ.",
       "telephone": "+79887219988",
       "address": {
         "@type": "PostalAddress",
@@ -234,8 +308,8 @@
     <!-- Header -->
     <header id="main-header" class="fixed top-4 left-4 right-4 md:top-0 md:left-0 md:right-0 z-50 transition-all duration-300 bg-transparent rounded-xl md:rounded-none">
       <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="text-2xl font-bold tracking-wider">
-          <span class="text-amber-500">БИ</span><span class="text-white logo-ko">КО</span>
+        <div class="text-xl md:text-2xl font-bold tracking-wider">
+          <span class="text-amber-500">РАБОЧИЙ</span><span class="text-white logo-ko"> РЕЗЕРВ</span>
         </div>
         <nav class="hidden md:flex items-center space-x-8">
           <a href="#hero" class="text-gray-300 hover:text-amber-400 transition cursor-pointer">Главная</a>
@@ -290,15 +364,15 @@
             <div class="absolute top-0 left-4 right-4 bottom-0 rounded-b-2xl bg-cover bg-center bg-no-repeat" style="background-image: url('https://cobico.ru/images/bgbico.webp')"></div>
             <div class="absolute top-0 left-4 right-4 bottom-0 rounded-b-2xl bg-black bg-opacity-60"></div>
             <div class="relative z-10 p-6">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
-                    Строительство домов и ремонт в <span class="text-amber-500">Улан-Удэ</span>
+                <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-lg">
+                    Грузчики и разнорабочие в <span class="text-amber-500">Улан-Удэ</span>
                 </h1>
-                <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-md md:max-w-3xl mx-auto mb-8 drop-shadow-md">
-                    Профессиональная бригада выполнит строительство домов, гаражей и ремонт квартир в Улан-Удэ. Скидки до 50%!
+                <p class="text-sm sm:text-lg md:text-xl text-gray-300 max-w-md md:max-w-3xl mx-auto mb-8 drop-shadow-md">
+                    Подача от 1 часа: переезды, погрузка/разгрузка, подъем мебели и стройматериалов. Почасовая оплата без скрытых доплат.
                 </p>
-                <a href="#contact" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-3 px-8 text-base md:py-4 md:px-10 md:text-lg rounded-full transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg inline-block">
-                    Получить консультацию
-                </a>
+                <button id="open-calc-modal" type="button" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-3 px-8 text-base md:py-4 md:px-10 md:text-lg rounded-full transition-transform duration-300 ease-in-out transform hover:scale-110 shadow-lg inline-block">
+                    Рассчитать стоимость
+                </button>
             </div>
         </section>
 
@@ -310,32 +384,32 @@
                             <article class="promo-banner-slide rounded-3xl p-7 md:p-9 h-full relative overflow-hidden">
                                 <div class="absolute -top-16 -right-14 w-44 h-44 bg-amber-500/20 blur-3xl"></div>
                                 <span class="promo-badges inline-flex items-center rounded-full px-4 py-1 text-xs uppercase tracking-[0.18em] text-amber-300">Весна 2026</span>
-                                <h3 class="text-2xl md:text-3xl font-bold text-white mt-4 mb-3">Скидка до 50% на отделочные работы</h3>
-                                <p class="text-gray-300 text-sm md:text-base">Подготовим дизайн, закупим материалы и выполним чистовую отделку под ключ с гарантией и прозрачной сметой.</p>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mt-4 mb-3">Скидка 10% на первый заказ от 4 часов</h3>
+                                <p class="text-gray-300 text-sm md:text-base">Соберем бригаду под задачу: квартирный/офисный переезд, спуск и подъем, вынос мусора, работы на складе.</p>
                             </article>
                         </div>
                         <div class="swiper-slide">
                             <article class="promo-banner-slide rounded-3xl p-7 md:p-9 h-full relative overflow-hidden">
                                 <div class="absolute -top-16 -right-14 w-44 h-44 bg-cyan-500/20 blur-3xl"></div>
                                 <span class="promo-badges inline-flex items-center rounded-full px-4 py-1 text-xs uppercase tracking-[0.18em] text-cyan-200">Для новых клиентов</span>
-                                <h3 class="text-2xl md:text-3xl font-bold text-white mt-4 mb-3">Бесплатный выезд инженера за 24 часа</h3>
-                                <p class="text-gray-300 text-sm md:text-base">Оценим объект, предложим варианты и зафиксируем стоимость до начала работ — без скрытых доплат.</p>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mt-4 mb-3">Выезд бригады в день обращения</h3>
+                                <p class="text-gray-300 text-sm md:text-base">Оператор уточнит объем, подберет нужное число людей и назовет ставку за час до начала работ.</p>
                             </article>
                         </div>
                         <div class="swiper-slide">
                             <article class="promo-banner-slide rounded-3xl p-7 md:p-9 h-full relative overflow-hidden">
                                 <div class="absolute -top-16 -right-14 w-44 h-44 bg-emerald-500/20 blur-3xl"></div>
                                 <span class="promo-badges inline-flex items-center rounded-full px-4 py-1 text-xs uppercase tracking-[0.18em] text-emerald-200">Под ключ</span>
-                                <h3 class="text-2xl md:text-3xl font-bold text-white mt-4 mb-3">Строительство домов с поэтапной оплатой</h3>
-                                <p class="text-gray-300 text-sm md:text-base">От фундамента до инженерных сетей: показываем прогресс каждую неделю и соблюдаем согласованные сроки.</p>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mt-4 mb-3">Почасовая оплата и честный учет времени</h3>
+                                <p class="text-gray-300 text-sm md:text-base">Оплата только за фактически отработанные часы. Старт/финиш фиксируем, переработки согласуем заранее.</p>
                             </article>
                         </div>
                         <div class="swiper-slide">
                             <article class="promo-banner-slide rounded-3xl p-7 md:p-9 h-full relative overflow-hidden">
                                 <div class="absolute -top-16 -right-14 w-44 h-44 bg-violet-500/20 blur-3xl"></div>
                                 <span class="promo-badges inline-flex items-center rounded-full px-4 py-1 text-xs uppercase tracking-[0.18em] text-violet-200">Комфорт</span>
-                                <h3 class="text-2xl md:text-3xl font-bold text-white mt-4 mb-3">Фиксируем сроки в договоре</h3>
-                                <p class="text-gray-300 text-sm md:text-base">Работаем по календарному графику и предоставляем фото/видео-отчёты с каждого этапа строительства.</p>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mt-4 mb-3">Работаем аккуратно и бережно</h3>
+                                <p class="text-gray-300 text-sm md:text-base">Упаковка, перенос и расстановка имущества без повреждений. Опытные бригадиры и контроль качества.</p>
                             </article>
                         </div>
                     </div>
@@ -344,270 +418,6 @@
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-extrabold text-white">Наши услуги в Улан-Удэ</h2>
-                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Мы предлагаем полный спектр услуг для реализации вашего проекта любой сложности.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
-                        <div class="mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">Строительство</h3>
-                        <p class="text-gray-400">Возведение зданий и сооружений с нуля. Мы используем современные технологии и качественные материалы для долговечности и надежности.</p>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
-                        <div class="mb-4">
-                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                           </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">Отделочные работы</h3>
-                        <p class="text-gray-400">Комплексная внутренняя и внешняя отделка. Создаем эстетически привлекательные и функциональные пространства для жизни и работы.</p>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
-                        <div class="mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">Монтаж систем</h3>
-                        <p class="text-gray-400">Профессиональный монтаж инженерных систем: отопление, вентиляция, водоснабжение, электрика. Гарантия безопасности и эффективности.</p>
-                    </div>
-                     <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
-                        <div class="mb-4">
-                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">Демонтаж</h3>
-                        <p class="text-gray-400">Выполняем профессиональный и аккуратный демонтаж старых построек и конструкций.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-20 bg-gray-800/50">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 flex items-center justify-center md:p-8">
-                        <h2 class="text-8xl md:text-9xl font-extrabold tracking-wider select-none text-center">
-                            <span class="text-amber-500">БИ</span><span class="text-white">КО</span>
-                        </h2>
-                    </div>
-                    <div class="md:w-1/2">
-                        <h2 class="text-4xl font-extrabold text-white mb-4">О Нашей Компании</h2>
-                        <p class="text-gray-300 mb-4 text-lg">
-                            <span class="font-semibold"><span class="text-amber-500">БИ</span><span class="text-white">КО</span></span> — это команда высококвалифицированных специалистов, объединенных общей целью: создавать качественные, надежные и современные объекты. Мы работаем на рынке более 5 лет, успешно реализуя проекты различной сложности.
-                        </p>
-                        <p class="text-gray-300 mb-6">
-                            Наш главный принцип — индивидуальный подход к каждому клиенту и строгий контроль качества на всех этапах работ, от проектирования до сдачи объекта. Мы гордимся своей репутацией и стремимся превосходить ожидания.
-                        </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span>Выгодные скидки до 50% на объемные заказы</span>
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span>Гарантия качества на все виды работ</span>
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span>Соблюдение сроков и бюджета проекта</span>
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span>Использование только сертифицированных материалов</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-extrabold text-white">Отзывы наших клиентов</h2>
-                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Что говорят о нас те, кто нам доверился.</p>
-                </div>
-                <!-- Swiper -->
-                <div class="swiper testimonials-slider relative group">
-                    <div class="swiper-wrapper">
-                        <!-- Testimonial 1 -->
-                        <div class="swiper-slide">
-                            <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-500/20 flex flex-col">
-                                <div class="flex-grow">
-                                    <svg class="w-10 h-10 text-amber-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path></svg>
-                                    <p class="text-gray-300 mb-4 sm:mb-6">"Работали с данной компанией над возведением и дальнейшем обслуживанием нашего развлекательного комплекса 'Муравейник' в ТЦ People's Park, г. Улан-Удэ. Все было выполнено в срок, качество на высшем уровне. Профессиональный подход и внимание к деталям. Очень довольны результатом!"</p>
-                                </div>
-                                <div class="mt-auto">
-                                    <div class="flex items-center">
-                                        <div>
-                                            <p class="font-bold text-white">Виктор</p>
-                                            <p class="text-sm text-gray-400">Компания 'От А до Я'</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center mt-4 text-amber-500">
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Testimonial 2 -->
-                        <div class="swiper-slide">
-                            <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-500/20 flex flex-col">
-                                <div class="flex-grow">
-                                    <svg class="w-10 h-10 text-amber-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path></svg>
-                                    <p class="text-gray-300 mb-4 sm:mb-6">"Заказывали комплексный ремонт офиса. Команда показала себя как надежный подрядчик. Все работы по отделке и монтажу инженерных систем были выполнены безупречно. Рекомендуем!"</p>
-                                </div>
-                                <div class="mt-auto">
-                                    <div class="flex items-center">
-                                        <div>
-                                            <p class="font-bold text-white">Мария Иванова</p>
-                                            <p class="text-sm text-gray-400">Директор ООО 'Перспектива'</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center mt-4 text-amber-500">
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Testimonial 3 -->
-                        <div class="swiper-slide">
-                           <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-500/20 flex flex-col">
-                                <div class="flex-grow">
-                                    <svg class="w-10 h-10 text-amber-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path></svg>
-                                    <p class="text-gray-300 mb-4 sm:mb-6">"Прозрачная смета, соблюдение сроков и отличное качество работ. Помогли нам с отделкой квартиры в новостройке. Бригада работала аккуратно и быстро. Однозначно будем советовать друзьям."</p>
-                                </div>
-                                <div class="mt-auto">
-                                    <div class="flex items-center">
-                                        <div>
-                                            <p class="font-bold text-white">Варитлов Константин</p>
-                                            <p class="text-sm text-gray-400">Владелец квартиры</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center mt-4 text-amber-500">
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Testimonial 4 -->
-                        <div class="swiper-slide">
-                           <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-500/20 flex flex-col">
-                                <div class="flex-grow">
-                                    <svg class="w-10 h-10 text-amber-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path></svg>
-                                    <p class="text-gray-300 mb-4 sm:mb-6">"Обратились для демонтажа старого гаража. Все сделали быстро, аккуратно и, что самое главное, вывезли весь строительный мусор. Очень ответственный подход к работе. Будем обращаться еще!"</p>
-                                </div>
-                                <div class="mt-auto">
-                                    <div class="flex items-center">
-                                        <div>
-                                            <p class="font-bold text-white">Ирина и Сергей Новиковы</p>
-                                            <p class="text-sm text-gray-400">Владельцы загородного дома</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center mt-4 text-amber-500">
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination mt-6 relative !bottom-auto md:hidden"></div>
-                    
-                    <!-- Add Navigation -->
-                    <div class="swiper-button-prev hidden md:flex items-center justify-center absolute top-1/2 left-0 transform -translate-y-1/2 w-12 h-12 bg-gray-800/60 rounded-full text-white cursor-pointer z-10 -ml-6 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:ml-4 hover:bg-amber-500">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    </div>
-                    <div class="swiper-button-next hidden md:flex items-center justify-center absolute top-1/2 right-0 transform -translate-y-1/2 w-12 h-12 bg-gray-800/60 rounded-full text-white cursor-pointer z-10 -mr-6 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:mr-4 hover:bg-amber-500">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="py-20 bg-gray-800/50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-extrabold text-white">Портфолио</h2>
-                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Реальные объекты, которые мы построили в Улан-Удэ и регионе.</p>
-                </div>
-                <div class="swiper portfolio-slider relative group">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <article class="portfolio-card rounded-2xl border border-gray-700 overflow-hidden shadow-xl hover:shadow-amber-500/20 transition-all duration-300">
-                                <img src="https://cobico.ru/images/portfolio1.png" alt="Детский комплекс" loading="lazy" class="portfolio-card-image" />
-                                <div class="p-6 sm:p-8">
-                                    <div class="inline-flex items-center portfolio-chip rounded-full px-3 py-1 text-xs font-semibold text-amber-300 mb-4">Завершенный проект</div>
-                                    <h3 class="text-2xl font-bold text-white mb-4">Детский комплекс</h3>
-                                    <p class="text-gray-300 mb-2"><span class="text-gray-400">Время возведения:</span> 3 месяца</p>
-                                    <div class="flex items-center gap-3 mt-4">
-                                        <span class="text-gray-400">Уровень сложности:</span>
-                                        <div class="flex text-amber-400" aria-label="5 из 5">
-                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="portfolio-card rounded-2xl border border-gray-700 overflow-hidden shadow-xl hover:shadow-amber-500/20 transition-all duration-300">
-                                <img src="https://cobico.ru/images//portfolio2.png" alt="Дом 120 квадратных метров" loading="lazy" class="portfolio-card-image" />
-                                <div class="p-6 sm:p-8">
-                                    <div class="inline-flex items-center portfolio-chip rounded-full px-3 py-1 text-xs font-semibold text-amber-300 mb-4">Завершенный проект</div>
-                                    <h3 class="text-2xl font-bold text-white mb-4">Дом 120м²</h3>
-                                    <p class="text-gray-300 mb-2"><span class="text-gray-400">Время возведения:</span> 2 месяца</p>
-                                    <div class="flex items-center gap-3 mt-4">
-                                        <span class="text-gray-400">Уровень сложности:</span>
-                                        <div class="flex text-amber-400" aria-label="3 из 5">
-                                            <span>★</span><span>★</span><span>★</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="portfolio-pagination mt-6 relative !bottom-auto md:hidden"></div>
-                    <div class="portfolio-button-prev hidden md:flex items-center justify-center absolute top-1/2 left-0 transform -translate-y-1/2 w-12 h-12 bg-gray-800/60 rounded-full text-white cursor-pointer z-10 -ml-6 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:ml-4 hover:bg-amber-500">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    </div>
-                    <div class="portfolio-button-next hidden md:flex items-center justify-center absolute top-1/2 right-0 transform -translate-y-1/2 w-12 h-12 bg-gray-800/60 rounded-full text-white cursor-pointer z-10 -mr-6 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:mr-4 hover:bg-amber-500">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
         <!-- Contact Section -->
         <section id="contact" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
@@ -615,8 +425,8 @@
                     <div class="pt-10 pb-4 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
                         <div class="lg:self-center">
                             <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
-                                <span class="block">Готовы начать проект?</span>
-                                <span class="block text-amber-500">Свяжитесь с нами.</span>
+                                <span class="block">Нужны грузчики или разнорабочие?</span>
+                                <span class="block text-amber-500">Оставьте заявку — перезвоним за 5 минут.</span>
                             </h2>
                             <p class="mt-4 text-lg leading-6 text-gray-300">
                                 Оставьте свой номер телефона, и наш менеджер свяжется с вами в ближайшее время для бесплатной консультации и расчета стоимости вашего проекта.
@@ -650,19 +460,326 @@
                 </div>
             </div>
         </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-white">Наши услуги с почасовой оплатой</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Закрываем бытовые и коммерческие задачи: от квартирного переезда до разгрузки фур и подсобных работ на объекте.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
+                        <div class="mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Квартирные и офисные переезды</h3>
+                        <p class="text-gray-400">Аккуратно переносим мебель, технику и коробки. Поможем с разборкой/сборкой и расстановкой на новом месте.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
+                        <div class="mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                           </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Погрузка и разгрузка</h3>
+                        <p class="text-gray-400">Работаем со складами, магазинами и транспортными компаниями. Разгрузка фур, газелей, контейнеров по часам.</p>
+                    </div>
+                    <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
+                        <div class="mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Подъем материалов</h3>
+                        <p class="text-gray-400">Поднимем гипсокартон, плитку, мешки, мебель и оборудование на любой этаж вручную или с такелажом.</p>
+                    </div>
+                     <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-amber-500/20">
+                        <div class="mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Разнорабочие на объект</h3>
+                        <p class="text-gray-400">Подсобные работы на стройке, уборка территории, вынос мусора, комплектация и сортировка материалов.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 flex items-center justify-center md:p-8">
+                        <h2 class="text-6xl md:text-7xl font-extrabold tracking-wider select-none text-center">
+                            <span class="text-amber-500">РАБОЧИЙ</span><span class="text-white"> РЕЗЕРВ</span>
+                        </h2>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl font-extrabold text-white mb-4">О нашей службе</h2>
+                        <p class="text-gray-300 mb-4 text-lg">
+                            <span class="font-semibold"><span class="text-amber-500">РАБОЧИЙ</span><span class="text-white"> РЕЗЕРВ</span></span> — это команда опытных грузчиков и разнорабочих. Более 5 лет помогаем с переездами, разгрузкой транспорта и подсобными работами для частных клиентов и бизнеса.
+                        </p>
+                        <p class="text-gray-300 mb-6">
+                            Нам доверяют частные клиенты и бизнес: приезжаем вовремя, работаем трезво и аккуратно, всегда на связи. Подбираем бригаду под объем и бюджет, чтобы вы не переплачивали.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Прозрачный почасовой тариф без скрытых платежей</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Подача бригады от 1 часа в удобное время</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Бережная работа с мебелью, техникой и материалами</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Опытные сотрудники и контроль бригадира на месте</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-white">Отзывы наших клиентов</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Что говорят о нас те, кто нам доверился.</p>
+                </div>
+                <!-- Swiper -->
+                <div class="swiper testimonials-slider relative group">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide">
+                            <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-500/20 flex flex-col">
+                                <div class="flex-grow">
+                                    <svg class="w-10 h-10 text-amber-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path></svg>
+                                    <p class="text-gray-300 mb-4 sm:mb-6">"Заказывали бригаду на ночную разгрузку фуры и сортировку коробов на складе. Ребята приехали вовремя, отработали быстро и без простоев. Отличный сервис!"</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <p class="font-bold text-white">Виктор</p>
+                                            <p class="text-sm text-gray-400">Складской комплекс "Логистик-Сервис"</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mt-4 text-amber-500">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide">
+                            <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-500/20 flex flex-col">
+                                <div class="flex-grow">
+                                    <svg class="w-10 h-10 text-amber-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path></svg>
+                                    <p class="text-gray-300 mb-4 sm:mb-6">"Переезжали офисом на новый адрес. Грузчики разобрали мебель, аккуратно перевезли и помогли собрать обратно. Все за один день."</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <p class="font-bold text-white">Мария Иванова</p>
+                                            <p class="text-sm text-gray-400">Директор ООО 'Перспектива'</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mt-4 text-amber-500">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide">
+                           <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-500/20 flex flex-col">
+                                <div class="flex-grow">
+                                    <svg class="w-10 h-10 text-amber-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path></svg>
+                                    <p class="text-gray-300 mb-4 sm:mb-6">"Нужны были разнорабочие на 2 дня: вынос мусора, подъем материалов и уборка площадки. Все сделали четко, оплата строго по часам."</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <p class="font-bold text-white">Варитлов Константин</p>
+                                            <p class="text-sm text-gray-400">Частный клиент</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mt-4 text-amber-500">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 4 -->
+                        <div class="swiper-slide">
+                           <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-amber-500 transition-all duration-300 shadow-lg hover:shadow-amber-500/20 flex flex-col">
+                                <div class="flex-grow">
+                                    <svg class="w-10 h-10 text-amber-500 mb-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"></path></svg>
+                                    <p class="text-gray-300 mb-4 sm:mb-6">"Заказывали грузчиков для квартирного переезда с 5 этажа без лифта. Работали слаженно, ничего не повредили и уложились в оговоренное время."</p>
+                                </div>
+                                <div class="mt-auto">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <p class="font-bold text-white">Ирина и Сергей Новиковы</p>
+                                            <p class="text-sm text-gray-400">Семья Мельниковых</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center mt-4 text-amber-500">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination mt-6 relative !bottom-auto md:hidden"></div>
+                    
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-prev hidden md:flex items-center justify-center absolute top-1/2 left-0 transform -translate-y-1/2 w-12 h-12 bg-gray-800/60 rounded-full text-white cursor-pointer z-10 -ml-6 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:ml-4 hover:bg-amber-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </div>
+                    <div class="swiper-button-next hidden md:flex items-center justify-center absolute top-1/2 right-0 transform -translate-y-1/2 w-12 h-12 bg-gray-800/60 rounded-full text-white cursor-pointer z-10 -mr-6 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:mr-4 hover:bg-amber-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-white">Кейсы</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Примеры задач, которые наша команда выполняет ежедневно.</p>
+                </div>
+                <div class="swiper portfolio-slider relative group">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="portfolio-card rounded-2xl border border-gray-700 overflow-hidden shadow-xl hover:shadow-amber-500/20 transition-all duration-300">
+                                <img src="https://cobico.ru/images/portfolio1.png" alt="Квартирный переезд" loading="lazy" class="portfolio-card-image" />
+                                <div class="p-6 sm:p-8">
+                                    <div class="inline-flex items-center portfolio-chip rounded-full px-3 py-1 text-xs font-semibold text-amber-300 mb-4">Завершенный проект</div>
+                                    <h3 class="text-2xl font-bold text-white mb-4">Квартирный переезд 2-комнатной квартиры</h3>
+                                    <p class="text-gray-300 mb-2"><span class="text-gray-400">Время работы:</span> 6 часов (4 грузчика)</p>
+                                    <div class="flex items-center gap-3 mt-4">
+                                        <span class="text-gray-400">Оценка клиента:</span>
+                                        <div class="flex text-amber-400" aria-label="5 из 5">
+                                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="portfolio-card rounded-2xl border border-gray-700 overflow-hidden shadow-xl hover:shadow-amber-500/20 transition-all duration-300">
+                                <img src="https://cobico.ru/images//portfolio2.png" alt="Разгрузка фуры" loading="lazy" class="portfolio-card-image" />
+                                <div class="p-6 sm:p-8">
+                                    <div class="inline-flex items-center portfolio-chip rounded-full px-3 py-1 text-xs font-semibold text-amber-300 mb-4">Завершенный проект</div>
+                                    <h3 class="text-2xl font-bold text-white mb-4">Разгрузка фуры и размещение на складе</h3>
+                                    <p class="text-gray-300 mb-2"><span class="text-gray-400">Время работы:</span> 3.5 часа (6 грузчиков)</p>
+                                    <div class="flex items-center gap-3 mt-4">
+                                        <span class="text-gray-400">Оценка клиента:</span>
+                                        <div class="flex text-amber-400" aria-label="3 из 5">
+                                            <span>★</span><span>★</span><span>★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="portfolio-pagination mt-6 relative !bottom-auto md:hidden"></div>
+                    <div class="portfolio-button-prev hidden md:flex items-center justify-center absolute top-1/2 left-0 transform -translate-y-1/2 w-12 h-12 bg-gray-800/60 rounded-full text-white cursor-pointer z-10 -ml-6 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:ml-4 hover:bg-amber-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </div>
+                    <div class="portfolio-button-next hidden md:flex items-center justify-center absolute top-1/2 right-0 transform -translate-y-1/2 w-12 h-12 bg-gray-800/60 rounded-full text-white cursor-pointer z-10 -mr-6 transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:mr-4 hover:bg-amber-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
     <!-- Footer -->
+
+    <div id="calc-modal" class="calc-modal-overlay hidden" aria-hidden="true">
+      <div class="calc-modal-card p-6 sm:p-8 relative">
+        <button id="close-calc-modal" type="button" class="absolute top-4 right-4 text-gray-400 hover:text-amber-500 transition" aria-label="Закрыть окно">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <h3 class="text-2xl font-extrabold text-white mb-2">Рассчитать стоимость</h3>
+        <p class="text-gray-300 mb-5">Оставьте номер телефона — перезвоним в течение 5 минут.</p>
+
+        <form id="calcPhoneForm" action="send_to_telegram.php" method="POST" class="space-y-4">
+          <input
+            id="calc-phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            placeholder="+7 (___) ___-__-__"
+            required
+            class="block w-full py-3 px-5 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
+          />
+          <input
+            id="calc-send-button"
+            type="submit"
+            value="Отправить"
+            class="w-full inline-flex items-center justify-center gap-2 px-7 py-3 font-semibold text-white rounded-xl text-base transition-all duration-300 ease-in-out cursor-pointer bg-gradient-to-r from-amber-600 to-amber-500 shadow-lg shadow-amber-500/20 hover:shadow-xl hover:shadow-amber-500/30 hover:-translate-y-1"
+          />
+          <p id="calc-form-error-message" class="text-red-500 text-sm text-center hidden"></p>
+        </form>
+
+        <div class="mt-5 calc-modal-secondary rounded-xl p-4">
+          <p class="text-sm text-gray-300 mb-3">Дополнительные виды связи</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a href="tel:+79887219988" class="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-green-600 hover:bg-green-700 text-white font-semibold transition">
+              Позвонить
+            </a>
+            <a href="https://t.me/rrezerv" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-sky-600 hover:bg-sky-700 text-white font-semibold transition">
+              Telegram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="bg-gray-800 border-t border-gray-700">
       <div class="container mx-auto px-6 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Column 1: Company Info -->
           <div class="col-span-1 md:col-span-2 lg:col-span-1">
             <div class="text-2xl font-bold tracking-wider mb-4">
-              <a href="#"><span class="text-amber-500">БИ</span><span class="text-white">КО</span></a>
+              <a href="#"><span class="text-amber-500">РАБОЧИЙ</span><span class="text-white"> РЕЗЕРВ</span></a>
             </div>
             <p class="text-gray-400 mb-4 max-w-xs">
-              Ваш надежный партнер в мире строительства. Качество, надежность и профессионализм.
+              Надежная служба грузчиков и разнорабочих с почасовой оплатой в Улан-Удэ.
             </p>
             <div class="flex space-x-4 mt-6">
               <a href="https://t.me/rrezerv" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-amber-500 transition-colors duration-300" aria-label="Telegram">
@@ -679,9 +796,9 @@
               <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Услуги</a></li>
               <li><a href="#about" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">О нас</a></li>
               <li><a href="#testimonials" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Отзывы</a></li>
-              <li><a href="#portfolio" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Портфолио</a></li>
+              <li><a href="#portfolio" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Кейсы</a></li>
               <li><a href="#contact" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Контакты</a></li>
-              <li><a href="portfolio.html" class="auth-link hidden text-gray-400 hover:text-amber-500 transition-colors duration-300">Портфолио</a></li>
+              <li><a href="portfolio.html" class="auth-link hidden text-gray-400 hover:text-amber-500 transition-colors duration-300">Кейсы</a></li>
             </ul>
           </div>
     
@@ -689,10 +806,10 @@
           <div>
             <h3 class="text-lg font-semibold text-white mb-4">Наши Услуги</h3>
             <ul class="space-y-2">
-              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Строительство</a></li>
-              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Отделочные работы</a></li>
-              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Монтаж систем</a></li>
-              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Демонтаж</a></li>
+              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Квартирные и офисные переезды</a></li>
+              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Погрузка и разгрузка</a></li>
+              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Подъем материалов</a></li>
+              <li><a href="#services" class="text-gray-400 hover:text-amber-500 transition-colors duration-300">Разнорабочие на объект</a></li>
             </ul>
           </div>
     
@@ -716,7 +833,7 @@
           </div>
         </div>
         <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">
-          <p>&copy; <span id="current-year"></span> БИКО. Все права защищены.</p>
+          <p>&copy; <span id="current-year"></span> Рабочий резерв. Все права защищены.</p>
         </div>
       </div>
     </footer>
@@ -871,16 +988,17 @@
           });
 
 
-          // --- Contact Form Logic ---
-          const phoneForm = document.getElementById('phoneForm');
-          if (phoneForm) {
-              phoneForm.addEventListener('submit', async function(event) {
+          // --- Contact Forms Logic ---
+          const attachPhoneFormHandler = (formId, errorId, onSuccess) => {
+              const form = document.getElementById(formId);
+              if (!form) return;
+
+              form.addEventListener('submit', async function(event) {
                   event.preventDefault();
 
-                  const form = this;
                   const submitButton = form.querySelector('input[type="submit"]');
                   const phoneInput = form.querySelector('input[type="tel"]');
-                  const errorMessage = document.getElementById('form-error-message');
+                  const errorMessage = document.getElementById(errorId);
                   const phone = phoneInput.value.trim();
 
                   if (!phone) {
@@ -891,7 +1009,6 @@
                       return;
                   }
 
-                  // Отключаем кнопку и показываем загрузку
                   submitButton.disabled = true;
                   submitButton.value = 'Отправка...';
                   submitButton.classList.add('opacity-70', 'cursor-wait');
@@ -916,6 +1033,7 @@
                           submitButton.disabled = true;
                           phoneInput.disabled = true;
                           phoneInput.value = '';
+                          if (onSuccess) onSuccess();
                       } else {
                           throw new Error(result.message || 'Ошибка при отправке');
                       }
@@ -929,7 +1047,50 @@
                       }
                   }
               });
+          };
+
+          attachPhoneFormHandler('phoneForm', 'form-error-message');
+
+          // --- Calculate Cost Modal Logic ---
+          const calcModal = document.getElementById('calc-modal');
+          const openCalcModalButton = document.getElementById('open-calc-modal');
+          const closeCalcModalButton = document.getElementById('close-calc-modal');
+
+          const openCalcModal = () => {
+              if (!calcModal) return;
+              calcModal.classList.remove('hidden');
+              calcModal.setAttribute('aria-hidden', 'false');
+              document.body.classList.add('overflow-hidden');
+          };
+
+          const closeCalcModal = () => {
+              if (!calcModal) return;
+              calcModal.classList.add('hidden');
+              calcModal.setAttribute('aria-hidden', 'true');
+              document.body.classList.remove('overflow-hidden');
+          };
+
+          if (openCalcModalButton) {
+              openCalcModalButton.addEventListener('click', openCalcModal);
           }
+
+          if (closeCalcModalButton) {
+              closeCalcModalButton.addEventListener('click', closeCalcModal);
+          }
+
+          if (calcModal) {
+              calcModal.addEventListener('click', (event) => {
+                  if (event.target === calcModal) closeCalcModal();
+              });
+          }
+
+          document.addEventListener('keydown', (event) => {
+              if (event.key === 'Escape') closeCalcModal();
+          });
+
+          attachPhoneFormHandler('calcPhoneForm', 'calc-form-error-message', () => {
+              setTimeout(closeCalcModal, 900);
+          });
 
           // --- Floating Action Button Logic ---
           const fabContainer = document.getElementById('fab-container');
